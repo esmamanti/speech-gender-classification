@@ -1,0 +1,4 @@
+﻿split,male,female
+test,784,785
+train,3660,3660
+val,785,784
