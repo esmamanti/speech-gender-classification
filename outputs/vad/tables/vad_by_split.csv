@@ -1,0 +1,7 @@
+﻿split,label,files,no_speech,mean_speech_ratio
+test,female,785,0,0.897
+test,male,784,0,0.885
+train,female,3660,0,0.897
+train,male,3660,0,0.889
+val,female,784,0,0.895
+val,male,785,0,0.895

@@ -1,0 +1,4 @@
+﻿label,files,has_speech,no_speech,mean_duration_sec,mean_speech_sec,mean_silence_removed_sec,mean_speech_ratio,mean_n_segments,total_hours_before,total_hours_after
+male,5229.0,5229.0,0.0,3.303,2.907,0.396,0.889,1.108,4.797,4.222
+female,5229.0,5229.0,0.0,3.242,2.909,0.333,0.897,1.104,4.709,4.226
+all,10458.0,10458.0,0.0,3.272,2.908,0.364,0.893,1.106,9.506,8.448
