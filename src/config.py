@@ -22,6 +22,7 @@ ID2LABEL = {v: k for k, v in LABEL2ID.items()}
 TRAIN_RATIO = 0.70
 VAL_RATIO = 0.15
 TEST_RATIO = 0.15
+N_FOLDS = 5                # k-fold cross validation (train+val üzerinde)
 
 # ---------- Ses ----------
 SAMPLE_RATE = 16000        # Silero VAD 16 kHz istiyor
