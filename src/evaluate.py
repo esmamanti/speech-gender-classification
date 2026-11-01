@@ -11,8 +11,8 @@ from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
                              precision_score, recall_score, roc_auc_score,
                              roc_curve)
 
-from src.config import (ID2LABEL, LABEL2ID, LABELS, OUT_DATA, OUT_FEATURES,
-                        OUT_MODELS)
+from src.config import (ID2LABEL, LABEL2ID, LABELS, OUT_FEATURES, OUT_MODELS,
+                        OUT_SPLITS, SPLIT_MODE)
 from src.plots import save_fig, save_table, set_style
 
 METRICS = ["accuracy", "precision", "recall", "f1", "auc"]
@@ -21,10 +21,12 @@ METRICS = ["accuracy", "precision", "recall", "f1", "auc"]
 # ---------------------------------------------------------------- veri
 def load_feature_splits():
     """Akustik özellikleri 5-fold (dev) ve test olarak döndürür.
-    dev: train+val birleşik, 'fold' sütunu var. test: hiç dokunulmayan set."""
+    dev: train+val birleşik, 'fold' sütunu var. test: hiç dokunulmayan set.
+    Hangi bölmenin kullanılacağını SPLIT_MODE belirler (random / speaker)."""
+    print(f"📂 Bölme türü: {SPLIT_MODE}  ({OUT_SPLITS})")
     feats = pd.read_csv(OUT_FEATURES / "acoustic_features.csv")
-    folds = pd.read_csv(OUT_DATA / "cv_folds.csv")[["path", "fold"]]
-    test_paths = set(pd.read_csv(OUT_DATA / "test.csv")["path"])
+    folds = pd.read_csv(OUT_SPLITS / "cv_folds.csv")[["path", "fold"]]
+    test_paths = set(pd.read_csv(OUT_SPLITS / "test.csv")["path"])
 
     dev = feats.merge(folds, on="path", how="inner").reset_index(drop=True)
     test = feats[feats["path"].isin(test_paths)].reset_index(drop=True)

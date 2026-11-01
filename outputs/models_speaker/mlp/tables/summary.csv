@@ -1,0 +1,2 @@
+﻿model,variant,n_params,train_time_min,cv_accuracy_mean,cv_accuracy_std,cv_precision_mean,cv_precision_std,cv_recall_mean,cv_recall_std,cv_f1_mean,cv_f1_std,cv_auc_mean,cv_auc_std,test_accuracy,test_precision,test_recall,test_f1,test_auc,test_accuracy_fold_models_mean,test_accuracy_fold_models_std
+MLP,F0 + Formant,3073,1.17,0.9208,0.0828,0.9415,0.0831,0.9099,0.1762,0.9133,0.1023,0.9947,0.0097,0.9994,1.0,0.9989,0.9994,1.0,0.9975,0.0027

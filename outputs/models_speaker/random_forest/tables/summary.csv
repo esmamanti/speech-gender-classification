@@ -1,0 +1,4 @@
+﻿model,variant,n_features,cv_accuracy_mean,cv_accuracy_std,cv_precision_mean,cv_precision_std,cv_recall_mean,cv_recall_std,cv_f1_mean,cv_f1_std,cv_auc_mean,cv_auc_std,test_accuracy,test_precision,test_recall,test_f1,test_auc
+Random Forest,F0,5,0.9642,0.0402,0.9739,0.0385,0.9565,0.0882,0.9624,0.0447,0.9996,0.0005,0.9871,1.0,0.9742,0.987,1.0
+Random Forest,Formant,5,0.7032,0.1698,0.6551,0.1672,0.69,0.3759,0.6425,0.3187,0.7814,0.1999,0.8858,0.8229,0.9832,0.8959,0.9757
+Random Forest,F0 + Formant,11,0.9485,0.0587,0.9611,0.0528,0.9401,0.1296,0.9446,0.069,0.9985,0.0016,0.9888,1.0,0.9776,0.9887,0.9999

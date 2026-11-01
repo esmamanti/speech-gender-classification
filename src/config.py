@@ -1,4 +1,5 @@
 """Projedeki tüm yollar ve ayarlar tek yerde."""
+import os
 from pathlib import Path
 
 # ---------- Yollar ----------
@@ -9,8 +10,18 @@ OUTPUTS = ROOT / "outputs"
 OUT_DATA = OUTPUTS / "data"
 OUT_VAD = OUTPUTS / "vad"
 OUT_FEATURES = OUTPUTS / "features"
-OUT_MODELS = OUTPUTS / "models"
 OUT_RESULTS = OUTPUTS / "results"
+
+# ---------- Bölme türü ----------
+# "random"  : kayıtlar rastgele bölünür (aynı konuşmacı hem train hem test'te olabilir)
+# "speaker" : test konuşmacıları eğitimde HİÇ yok (gerçekçi değerlendirme)
+# Terminalde seçmek için (PowerShell):  $env:SPLIT_MODE="speaker"
+SPLIT_MODE = os.environ.get("SPLIT_MODE", "random").lower()
+if SPLIT_MODE not in ("random", "speaker"):
+    raise ValueError(f"SPLIT_MODE 'random' veya 'speaker' olmalı, gelen: {SPLIT_MODE}")
+OUT_SPLITS = OUT_DATA if SPLIT_MODE == "random" else OUT_DATA / "speaker_split"
+OUT_MODELS = OUTPUTS / ("models" if SPLIT_MODE == "random" else "models_speaker")
+N_TEST_SPEAKERS = {"male": 2, "female": 2}   # konuşmacı bölmesinde teste ayrılan kişi sayısı
 
 # ---------- Genel ----------
 SEED = 42

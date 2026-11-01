@@ -1,0 +1,12 @@
+﻿feature,gini_importance,permutation_importance_mean,permutation_importance_std
+f0_median,0.3233,0.0162,0.002
+f0_p5,0.1603,0.0089,0.0026
+F3,0.0321,0.0041,0.0008
+f0_p95,0.145,0.001,0.0009
+formant_dispersion,0.0229,0.0008,0.0007
+f0_std,0.0059,0.0007,0.0004
+F4,0.0547,0.0001,0.0006
+voiced_ratio,0.0017,-0.0,0.0004
+f0_mean,0.2447,-0.0002,0.0013
+F2,0.0064,-0.0003,0.0006
+F1,0.0031,-0.0008,0.0006

@@ -1,0 +1,2 @@
+﻿model,variant,n_params,train_time_min,cv_accuracy_mean,cv_accuracy_std,cv_precision_mean,cv_precision_std,cv_recall_mean,cv_recall_std,cv_f1_mean,cv_f1_std,cv_auc_mean,cv_auc_std,test_accuracy,test_precision,test_recall,test_f1,test_auc,test_accuracy_fold_models_mean,test_accuracy_fold_models_std
+CNN,log-mel,97521,4.99,0.9999,0.0003,0.9998,0.0005,1.0,0.0,0.9999,0.0003,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
