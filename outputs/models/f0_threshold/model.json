@@ -1,0 +1,5 @@
+{
+  "feature": "f0_median",
+  "threshold_hz": 162.0,
+  "rule": "f0_median >= threshold -> female, else male"
+}
