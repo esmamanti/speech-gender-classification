@@ -1,0 +1,11 @@
+silero-vad
+librosa
+soundfile
+praat-parselmouth
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tqdm
+ipykernel

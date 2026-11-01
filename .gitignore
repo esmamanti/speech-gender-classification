@@ -1,0 +1,11 @@
+
+# Proje
+.venv/
+data/
+outputs/vad/clean_wav/
+outputs/features/mels/
+outputs/models/**/*.pt
+outputs/models/**/*.pkl
+*.wav
+*.flac
+*.npy
